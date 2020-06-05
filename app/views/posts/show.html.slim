@@ -1,4 +1,8 @@
 h1
   | Posts#show
+
 p
-  | Find me in app/views/posts/show.html.erb
+  = @post.title
+  = @post.description
+  = @post.content
+  = @post.favorites.count

@@ -1,4 +1,14 @@
 h1
   | Posts#index
-p
-  | Find me in app/views/posts/index.html.erb
+
+- @posts.each do |post|
+  = link_to post.user.username, user_path(post.user.id)
+  = link_to post.title, post_path(post.id)
+
+  - if user_signed_in?
+    - if post.favorited_by(current_user)
+      = link_to post.favorites.count, post_favorites_path(post.id), method: :delete
+    - else
+      = link_to post.favorites.count, post_favorites_path(post.id), method: :post
+  - else
+    = post.favorites.count
