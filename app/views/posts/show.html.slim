@@ -1,8 +1,11 @@
 h1
   | Posts#show
 
-p
-  = @post.title
-  = @post.description
-  = @post.content
-  = @post.favorites.count
+p= @post.title
+p= @post.description
+p= @post.content
+
+- if @post.favorited_by?(current_user)
+  p= link_to @post.favorites.count, post_favorites_path(@post.id), method: :delete
+-else
+  p= link_to @post.favorites.count, post_favorites_path(@post.id), method: :post
