@@ -3,3 +3,17 @@ h1 Users#show
 p
   = @user.username
   = @user.email
+
+h3 いいね
+- @favorite_posts.each do |f_post|
+  p
+    = f_post.title
+    = f_post.description
+    = f_post.content
+
+h3 投稿
+- @posts.each do |post|
+  p
+    = post.title
+    = post.description
+    = post.content
