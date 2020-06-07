@@ -4,16 +4,20 @@ p
   = @user.username
   = @user.email
 
-h3 いいね
+h3 いいねした投稿
 - @favorite_posts.each do |f_post|
   p
     = f_post.title
+    br
     = f_post.description
+    br
     = f_post.content
 
-h3 投稿
+h3 自分の投稿
 - @posts.each do |post|
   p
     = post.title
+    br
     = post.description
+    br
     = post.content

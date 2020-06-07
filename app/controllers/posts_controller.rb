@@ -15,6 +15,19 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def search
+    @selection = params[:keyword]
+    if @selection == 'new'
+      @posts = Post.all.order(created_at: :DESC)
+    elsif @selection == 'old'
+      @posts = Post.all.order(created_at: :ASC)
+    elsif @selection == 'likes'
+      @posts = Post.sort_favorites_desc
+    elsif @selection == 'dislikes'
+      @posts = Post.sort_favorites_asc
+    end
+  end
+
   def show
     @post = Post.find(params[:id])
   end
