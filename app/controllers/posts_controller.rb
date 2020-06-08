@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to posts_path
     end
   end
 
@@ -19,19 +19,7 @@ class PostsController < ApplicationController
 
   def search
     @selection = params[:keyword]
-    if @selection == 'new'
-      @posts = Post.sort_desc
-    elsif @selection == 'old'
-      @posts = Post.sort_asc
-    elsif @selection == 'likes'
-      @posts = Post.sort_favorites_desc
-    elsif @selection == 'dislikes'
-      @posts = Post.sort_favorites_asc
-    elsif @selection == 'pvmany'
-      @posts = Post.sort_pv_desc
-    elsif @selection == 'pvless'
-      @posts = Post.sort_pv_asc
-    end
+    @posts = Post.sort_date(@selection) || Post.sort_favorite(@selection) || Post.sort_pv(@selection)
   end
 
   def show
