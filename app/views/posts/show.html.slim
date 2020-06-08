@@ -4,6 +4,7 @@ h1
 p= @post.title
 p= @post.description
 p= @post.content
+p= @post.impressionist_count
 
 - if @post.favorited_by?(current_user)
   p= link_to @post.favorites.count, post_favorites_path(@post.id), method: :delete
