@@ -8,19 +8,22 @@ class Post < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
-  def self.sort_date(date)
-    return all.order(created_at: :DESC) if date == 'new'
-    return all.order(created_at: :ASC) if date == 'old'
-  end
-
-  def self.sort_favorite(favorite)
-    return find(Favorite.group(:post_id).order(Arel.sql('count(post_id) desc')).pluck(:post_id)) if favorite == 'likes'
-    return find(Favorite.group(:post_id).order(Arel.sql('count(post_id) asc')).pluck(:post_id)) if favorite == 'dislikes'
-  end
-
-  def self.sort_pv(pv)
-    return order('impressions_count desc').all if pv == 'pvmany'
-    return order('impressions_count asc').all if pv == 'pvless'
+  # ソート用のインスタンスメソッド
+  def self.sort(selection)
+    case selection
+    when 'new'
+      return all.order(created_at: :DESC)
+    when 'old'
+      return all.order(created_at: :ASC)
+    when 'likes'
+      return find(Favorite.group(:post_id).order(Arel.sql('count(post_id) desc')).pluck(:post_id))
+    when 'dislikes'
+      return find(Favorite.group(:post_id).order(Arel.sql('count(post_id) asc')).pluck(:post_id))
+    when 'pvmany'
+      return order('impressions_count desc').all
+    when 'pvless'
+      return order('impressions_count asc').all
+    end
   end
 
 end

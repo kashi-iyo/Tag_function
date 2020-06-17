@@ -18,8 +18,8 @@ class PostsController < ApplicationController
   end
 
   def search
-    @selection = params[:keyword]
-    @posts = Post.sort_date(@selection) || Post.sort_favorite(@selection) || Post.sort_pv(@selection)
+    selection = params[:keyword]
+    @posts = Post.sort(selection)
   end
 
   def show
