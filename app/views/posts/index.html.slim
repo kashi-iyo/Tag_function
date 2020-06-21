@@ -1,5 +1,11 @@
 h1 投稿一覧
 
+/ = react_component("HelloWorld", { greeting: "Hello from react-rails" })
+
+/ = react_component('GreetUser', name: 'Mike')
+/ div#root= javascript_pack_tag 'hello_react'
+= react_component("counter", count: 10)
+
 = render 'select_form'
 
 = render 'result'
