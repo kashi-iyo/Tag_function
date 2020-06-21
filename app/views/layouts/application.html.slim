@@ -9,6 +9,9 @@ html
     = javascript_pack_tag 'application'
     / , 'data-turbolinks-track': 'reload'
   body
+    - if flash[:danger]
+      = flash[:danger]
+
     div#counter
       div#counter-count= 0
       button#counter-up= "+"
@@ -21,12 +24,13 @@ html
       li.dropdown
         a.dropdown-toggle href="#" メニュー
         ul
-          li= link_to '新規投稿', new_post_path
+
           li= link_to 'ユーザー一覧', users_path
           li= link_to 'ログアウト', destroy_user_session_path, method: :delete
     - else
       li= link_to '新規登録', new_user_registration_path
       li= link_to 'ログイン', new_user_session_path
+      li= link_to '新規投稿', new_post_path
 
     p.notice
       = notice

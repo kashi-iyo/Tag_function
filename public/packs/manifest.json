@@ -1,34 +1,44 @@
 {
-  "application.js": "/packs/js/application-e955f601c7e96d8da8c7.js",
-  "application.js.map": "/packs/js/application-e955f601c7e96d8da8c7.js.map",
+  "application.js": "/packs/js/application-b7bc04e768795ed3255f.js",
+  "application.js.map": "/packs/js/application-b7bc04e768795ed3255f.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-e955f601c7e96d8da8c7.js"
+        "/packs/js/application-b7bc04e768795ed3255f.js"
       ],
       "js.map": [
-        "/packs/js/application-e955f601c7e96d8da8c7.js.map"
+        "/packs/js/application-b7bc04e768795ed3255f.js.map"
       ]
     },
     "index": {
       "js": [
-        "/packs/js/index-dc35cf06867cda8478a4.js"
+        "/packs/js/index-4b475d0527b228aa4e53.js"
       ],
       "js.map": [
-        "/packs/js/index-dc35cf06867cda8478a4.js.map"
+        "/packs/js/index-4b475d0527b228aa4e53.js.map"
+      ]
+    },
+    "rails-ujs": {
+      "js": [
+        "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js"
+      ],
+      "js.map": [
+        "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js.map"
       ]
     },
     "server_rendering": {
       "js": [
-        "/packs/js/server_rendering-1e51b4cbadcb013401ae.js"
+        "/packs/js/server_rendering-f985d9f73b4228f97e23.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-1e51b4cbadcb013401ae.js.map"
+        "/packs/js/server_rendering-f985d9f73b4228f97e23.js.map"
       ]
     }
   },
-  "index.js": "/packs/js/index-dc35cf06867cda8478a4.js",
-  "index.js.map": "/packs/js/index-dc35cf06867cda8478a4.js.map",
-  "server_rendering.js": "/packs/js/server_rendering-1e51b4cbadcb013401ae.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-1e51b4cbadcb013401ae.js.map"
+  "index.js": "/packs/js/index-4b475d0527b228aa4e53.js",
+  "index.js.map": "/packs/js/index-4b475d0527b228aa4e53.js.map",
+  "rails-ujs.js": "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js",
+  "rails-ujs.js.map": "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-f985d9f73b4228f97e23.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-f985d9f73b4228f97e23.js.map"
 }
