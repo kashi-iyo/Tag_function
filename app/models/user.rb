@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :favorite_posts, through: :favorites, source: :post
   has_many :posts
 
+  has_many :tweets, dependent: :destroy
+
 end

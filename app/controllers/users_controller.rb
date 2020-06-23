@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts
     @favorite_posts = @user.favorite_posts
+    @tweets = @user.tweets.page(params[:page])
   end
 
   def edit

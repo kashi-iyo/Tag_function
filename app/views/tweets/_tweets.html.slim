@@ -1,0 +1,6 @@
+/ p= paginate @tweet
+
+li#"micropost-#{tweet.id}"
+  span.user = link_to tweet.user.username, tweet.user
+  span.content = tweet.content
+  span.timestamp = time_ago_in_words(tweet.created_at) "前"

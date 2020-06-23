@@ -23,3 +23,9 @@ h3 自分の投稿
     = post.description
     br
     = post.content
+
+- if @user.tweets.any?
+  h3 ツイート(= @user.tweets.count)
+  ol
+    = render @tweets
+  = paginate @tweets
