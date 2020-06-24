@@ -1,0 +1,7 @@
+= form_with model: @tweet, local: true do |f|
+  br
+  = f.text_area :content, placeholder: "述べてみる"
+  br
+  = f.submit "述"
+  br
+  = render 'shared/error_messages', object: f.object

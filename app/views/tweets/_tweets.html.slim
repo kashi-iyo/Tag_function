@@ -1,6 +1,11 @@
-/ p= paginate @tweet
-
-li#"micropost-#{tweet.id}"
-  span.user = link_to tweet.user.username, tweet.user
-  span.content = tweet.content
-  span.timestamp = time_ago_in_words(tweet.created_at) "前"
+br
+div id="tweet-#{@tweet.id}"
+  span.user
+    = link_to @tweet.user.username, @tweet.user
+    br
+  span.content
+    = @tweet.content
+    br
+  span.timestamp
+    = "#{time_ago_in_words(@tweet.created_at)} 前に作成" if @tweet.created_at
+    br
