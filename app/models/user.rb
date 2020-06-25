@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
   has_many :tweets, dependent: :destroy
 
+  def feed
+    Post.where("user_id = ?", id)
+  end
 end
