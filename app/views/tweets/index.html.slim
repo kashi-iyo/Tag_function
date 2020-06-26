@@ -1,0 +1,12 @@
+h1 述べる
+= form_with model: @tweet, local: true do |f|
+  p
+    = f.text_area :body
+  p= f.submit "述べる"
+
+hr
+- @tweets.each do |tweet|
+  = link_to tweet.user.username, user_path(tweet.user_id)
+  br
+  = link_to tweet.body, tweet_path(tweet.id)
+  hr

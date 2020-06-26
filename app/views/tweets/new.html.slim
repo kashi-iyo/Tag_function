@@ -1,0 +1,8 @@
+h1 Tweets#new
+p Find me in app/views/tweets/new.html.slim
+
+= form_with model: @tweet do |f|
+  p
+    = f.label :body, "述べる"
+    = f.text_area :body
+  p= f.submit "述べる"

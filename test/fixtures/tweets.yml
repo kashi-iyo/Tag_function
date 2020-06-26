@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyText
-  user: one
+  body: MyText
+  user_id: 1
 
 two:
-  content: MyText
-  user: two
+  body: MyText
+  user_id: 1

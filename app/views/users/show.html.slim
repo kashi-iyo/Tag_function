@@ -6,26 +6,39 @@ p
 
 p= link_to "プロフィール編集", edit_user_path(current_user)
 
-h3 いいねした投稿
+h3 ="いいねした投稿： #{@favorite_posts.count}"
 - @favorite_posts.each do |f_post|
-  p
-    = f_post.title
-    br
-    = f_post.description
-    br
-    = f_post.content
+  ul
+    li
+      = "タイトル"
+      = f_post.title
+      br
+      = "あらすじ"
+      = f_post.description
+      br
+      = "内容"
+      = f_post.content
 
-h3 自分の投稿
+h3 ="投稿作品： #{@posts.count}"
 - @posts.each do |post|
-  p
-    = post.title
-    br
-    = post.description
-    br
-    = post.content
+  ul
+    li
+      = "タイトル: "
 
-/ - if @user.tweets.any?
-/   h3 ツイート(= @user.tweets.count)
-/   ol
-/     = render 'shared/tweets_path'
-/   = paginate @tweets
+      = post.title
+      br
+      = "あらすじ: "
+
+      = post.description
+      br
+      = "内容: "
+
+      = post.content
+
+h3 ="マイ述べる：#{@tweets.count}"
+- if @user.tweets.any?
+ul
+  li
+    = render 'shared/tweets'
+
+= paginate @tweets
