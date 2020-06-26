@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_06_25_085922) do
+=======
+ActiveRecord::Schema.define(version: 2020_06_22_125250) do
+>>>>>>> new_function
 
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
@@ -58,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_06_25_085922) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
@@ -77,6 +82,8 @@ ActiveRecord::Schema.define(version: 2020_06_25_085922) do
     t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
+=======
+>>>>>>> new_function
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

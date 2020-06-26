@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   include UsersHelper
 
   before_action :authenticate_user!
-  before_action :correct_user, except: [:index]
+  before_action :correct_user, except: [:index, :show]
   before_action :admin_user, only: :destroy
 
   def index

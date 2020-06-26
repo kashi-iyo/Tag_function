@@ -2,7 +2,7 @@ h1 Users#index
 p Find me in app/views/users/index.html.slim
 
 - @users.each do |user|
-  = link_to user.email, user
+  = link_to user.email, user_path(user)
   br
   - if current_user.admin? && !current_user?(user)
   = link_to "削除", user, method: :delete, data: { confirm: "良いの？" }
