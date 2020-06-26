@@ -24,8 +24,8 @@ h3 自分の投稿
     br
     = post.content
 
-- if @user.tweets.any?
-  h3 ツイート(= @user.tweets.count)
-  ol
-    = render @tweets
-  = paginate @tweets
+/ - if @user.tweets.any?
+/   h3 ツイート(= @user.tweets.count)
+/   ol
+/     = render 'shared/tweets_path'
+/   = paginate @tweets

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   include UsersHelper
 
   before_action :authenticate_user!
-  before_action :correct_user, except: [:index]
+  before_action :correct_user, except: [:index, :show]
   before_action :admin_user, only: :destroy
 
   def index
@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts
     @favorite_posts = @user.favorite_posts
-    @tweets = @user.tweets.page(params[:page])
   end
 
   def edit

@@ -1,6 +1,6 @@
 h2 新規投稿
 
-= form_with model: @post do |f|
+= form_with model: @post, local: true do |f|
   p
     = f.label :title
     = f.text_field :title, placeholder: 'タイトル'
