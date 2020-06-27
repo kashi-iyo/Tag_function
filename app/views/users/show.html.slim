@@ -1,9 +1,25 @@
-h1 Users#show
+br
+br
+br
+h1 ユーザーのプロフィール
 
 p
   = "名前 : "
   = @user.username
+  = render 'relationships/follow_button', user: @user
+
+  br
+  = link_to "フォロー: #{@user.followings.count}", followings_user_path(@user.id)
+  = "／"
+  = link_to "フォロワー: #{@user.followers.count}", followers_user_path(@user.id)
+
 p= link_to "プロフィール編集", edit_user_path(current_user)
+
+br
+br
+br
+br
+br
 
 h3 ="いいねした投稿： #{@favorite_posts.count}"
 - @favorite_posts.each do |f_post|

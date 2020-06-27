@@ -1,5 +1,16 @@
 h1 Tweets#show
 p Find me in app/views/tweets/show.html.slim
 
-span= "ツイート内容："
-= @tweet.body
+span
+  ul
+    hr
+    li
+      = link_to @tweet.user.username, user_path(@tweet.user.id)
+      br
+      = @tweet.body
+      hr
+- if current_user != @tweet.user
+  - if current_user.following?(@tweet.user)
+    = link_to "フォロー解除", user_relationship_path(@tweet.user.id)
+  - else
+    = link_to "フォローする", user_relationships_path(@tweet.user.id)

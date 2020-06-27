@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :users, only: [:index, :show, :edit, :update, :delete]
+  resources :users, only: [:index, :show, :edit, :update, :delete] do
+    get :followings, on: :member
+    get :followers, on: :member
+  end
 
+  resources :relationships, only: [:create, :destroy]
 
   #検索結果をpostsコントローラのsearchアクションへ送信
   get 'search' => 'posts#search'
