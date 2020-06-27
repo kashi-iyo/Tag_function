@@ -1,0 +1,6 @@
+h2 フォローしている方々
+
+- @users.each do |user|
+  hr
+  = "username: "
+  = link_to user.username, user_path(user.id)
