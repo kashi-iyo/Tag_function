@@ -37,5 +37,3 @@ class User < ApplicationRecord
     relationship.destroy if relationship
   end
 end
-
-end
