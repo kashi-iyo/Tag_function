@@ -1,12 +1,13 @@
-h1
-  | Posts#show
+h1 作品のタイトルが入る
 
 p= @post.title
 p= @post.description
 p= @post.content
-p= @post.impressionist_count
+p= "PV：#{@post.impressionist_count}"
 
 - if @post.favorited_by?(current_user)
-  p= link_to @post.favorites.count, post_favorites_path(@post.id), method: :delete
--else
-  p= link_to @post.favorites.count, post_favorites_path(@post.id), method: :post
+  p= link_to "いいね：#{@post.favorites.count}", post_favorites_path(@post.id), method: :delete
+- else
+  p= link_to "いいね：#{@post.favorites.count}", post_favorites_path(@post.id), method: :post
+
+= react_component('CommentBox', url: 'api/v1/comments.json')
