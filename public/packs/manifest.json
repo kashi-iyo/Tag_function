@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-b7bc04e768795ed3255f.js",
-  "application.js.map": "/packs/js/application-b7bc04e768795ed3255f.js.map",
+  "application.js": "/packs/js/application-67532810e122687263b1.js",
+  "application.js.map": "/packs/js/application-67532810e122687263b1.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-b7bc04e768795ed3255f.js"
+        "/packs/js/application-67532810e122687263b1.js"
       ],
       "js.map": [
-        "/packs/js/application-b7bc04e768795ed3255f.js.map"
+        "/packs/js/application-67532810e122687263b1.js.map"
       ]
     },
     "index": {
@@ -28,10 +28,10 @@
     },
     "server_rendering": {
       "js": [
-        "/packs/js/server_rendering-f985d9f73b4228f97e23.js"
+        "/packs/js/server_rendering-8c3068979985d760667c.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-f985d9f73b4228f97e23.js.map"
+        "/packs/js/server_rendering-8c3068979985d760667c.js.map"
       ]
     }
   },
@@ -39,6 +39,6 @@
   "index.js.map": "/packs/js/index-4b475d0527b228aa4e53.js.map",
   "rails-ujs.js": "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js",
   "rails-ujs.js.map": "/packs/js/rails-ujs-93496d2ef72da9ba06c1.js.map",
-  "server_rendering.js": "/packs/js/server_rendering-f985d9f73b4228f97e23.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-f985d9f73b4228f97e23.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-8c3068979985d760667c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-8c3068979985d760667c.js.map"
 }
