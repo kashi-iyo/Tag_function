@@ -12,7 +12,7 @@ class CommentBox extends React.Component {
   //   return { data: [] };
   // },
 
-  componentDidMount: function() {
+  componentDidMount() {
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -23,7 +23,7 @@ class CommentBox extends React.Component {
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-  },
+  }
 
   render () {
     return (
